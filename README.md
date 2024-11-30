@@ -1,1 +1,1 @@
-dont mind me
+allow me to live 🙏
