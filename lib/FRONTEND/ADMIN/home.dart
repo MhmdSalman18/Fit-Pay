@@ -104,22 +104,22 @@ class adminHomeState extends State<adminHome> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    width: 100,
-                    height: 600,
+                    Container(
+                    width: MediaQuery.of(context).size.width * 0.4,
+                    height: MediaQuery.of(context).size.height * 0.8,
                     decoration: BoxDecoration(
                       color: Colors.red,
                       borderRadius: BorderRadius.circular(
-                          16.0), // Adjust the radius as needed
+                        16.0), // Adjust the radius as needed
                     ),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(
-                          16.0), // Apply the same radius to the image
+                        16.0), // Apply the same radius to the image
                       child: Image.asset(
-                          'images/logo.jpg' // Replace with your image URL
-                          ),
+                        'images/logo.jpg' // Replace with your image URL
+                        ),
                     ),
-                  ),
+                    ),
         
                   const SizedBox(width: 20), // Adds space between the containers
                   Column(
