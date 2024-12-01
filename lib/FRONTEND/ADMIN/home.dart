@@ -12,37 +12,34 @@ class adminHomeState extends State<adminHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-  leading: Builder(
-    builder: (context) => IconButton(
-      icon: Icon(Icons.menu),
-      onPressed: () {
-        Scaffold.of(context).openDrawer();
-      },
-    ),
-  ),
-  actions: <Widget>[
-    IconButton(
-      icon: Icon(Icons.notifications),
-      onPressed: () {
-        // Handle notification icon press
-      },
-
-    ),
-     IconButton(
-      icon: Icon(Icons.circle),
-      onPressed: () {
-        // Handle notification icon press
-      },
-    ),
-   
-  ],
-),
-
+        leading: Builder(
+          builder: (context) => IconButton(
+            icon: const Icon(Icons.menu),
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+          ),
+        ),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.notifications),
+            onPressed: () {
+              // Handle notification icon press
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.circle),
+            onPressed: () {
+              // Handle notification icon press
+            },
+          ),
+        ],
+      ),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            DrawerHeader(
+            const DrawerHeader(
               decoration: BoxDecoration(
                 color: Color.fromARGB(255, 199, 186, 1),
               ),
@@ -55,22 +52,22 @@ class adminHomeState extends State<adminHome> {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.dashboard),
-              title: Text('Dashboard'),
+              leading: const Icon(Icons.dashboard),
+              title: const Text('Dashboard'),
               onTap: () {
                 Navigator.pop(context); // Close the drawer
               },
             ),
             ListTile(
-              leading: Icon(Icons.settings),
-              title: Text('Settings'),
+              leading: const Icon(Icons.settings),
+              title: const Text('Settings'),
               onTap: () {
                 Navigator.pop(context); // Close the drawer
               },
             ),
             ListTile(
-              leading: Icon(Icons.logout),
-              title: Text('Logout'),
+              leading: const Icon(Icons.logout),
+              title: const Text('Logout'),
               onTap: () {
                 Navigator.pop(context); // Close the drawer
               },
@@ -78,108 +75,109 @@ class adminHomeState extends State<adminHome> {
           ],
         ),
       ),
-   body: Center(
-  child: Column(
-    // mainAxisAlignment: MainAxisAlignment.start,
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-        Padding(
-        padding: const EdgeInsets.only(left: 16.0), // Optional padding around the heading
-        child: Text(
-          'Health and fitness gym',
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-        ),
-      ),
-      SizedBox(height: 10), // Adds space between heading and paragraph
-       Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0), // Optional padding around the paragraph
-        child: Text(
-          'Kottayam',
-          textAlign: TextAlign.left,
-          style: TextStyle(fontSize: 16),
-        ),
-      ),
-      SizedBox(height: 20), // Adds space between the paragraph and row
-      Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-         Container(
-  width: 100,
-  height: 600,
-  decoration: BoxDecoration(
-    color: Colors.red,
-    borderRadius: BorderRadius.circular(16.0), // Adjust the radius as needed
-  ),
-  child: ClipRRect(
-    borderRadius: BorderRadius.circular(16.0), // Apply the same radius to the image
-    child: Image.asset('images/logo.jpg' // Replace with your image URL
-    ),
-  ),
-),
-
-          SizedBox(width: 20), // Adds space between the containers
-          Column(
-            children: [
-                SizedBox(width: 20), // Adds space between the containers
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.blue,
-            child: Center(
+      body: Center(
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Padding(
+              padding: EdgeInsets.only(
+                  left: 16.0), // Optional padding around the heading
               child: Text(
-                'Container 2',
-                style: TextStyle(color: Colors.white),
+                'Health and fitness gym',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
             ),
-          ),
-          
-          
-          SizedBox(height: 20), // Adds space between the containers
-              Container(
-                width: 100,
-                height: 100,
-                color: Colors.blue,
-                child: Center(
-                  child: Text(
-                    'Container 2',
-                    style: TextStyle(color: Colors.white),
+            const SizedBox(height: 10), // Adds space between heading and paragraph
+            const Padding(
+              padding: EdgeInsets.symmetric(
+                  horizontal: 16.0), // Optional padding around the paragraph
+              child: Text(
+                'Kottayam',
+                textAlign: TextAlign.left,
+                style: TextStyle(fontSize: 16),
+              ),
+            ),
+            const SizedBox(height: 20), // Adds space between the paragraph and row
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: 100,
+                  height: 600,
+                  decoration: BoxDecoration(
+                    color: Colors.red,
+                    borderRadius: BorderRadius.circular(
+                        16.0), // Adjust the radius as needed
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(
+                        16.0), // Apply the same radius to the image
+                    child: Image.asset(
+                        'images/logo.jpg' // Replace with your image URL
+                        ),
                   ),
                 ),
-              ),
-               SizedBox(height: 20), // Adds space between the containers
-              Container(
-                width: 100,
-                height: 100,
-                color: Colors.blue,
-                child: Center(
-                  child: Text(
-                    'Container 2',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-              ),
-               SizedBox(height: 20), // Adds space between the containers
-              Container(
-                width: 100,
-                height: 100,
-                color: Colors.blue,
-                child: Center(
-                  child: Text(
-                    'Container 2',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          
-          
-        ],
-      ),
-    ],
-  ),
-),
 
+                const SizedBox(width: 20), // Adds space between the containers
+                Column(
+                  children: [
+                    const SizedBox(width: 20), // Adds space between the containers
+                    Container(
+                      width: 100,
+                      height: 100,
+                      color: Colors.blue,
+                      child: const Center(
+                        child: Text(
+                          'Container 2',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    ),
+
+                    const SizedBox(height: 20), // Adds space between the containers
+                    Container(
+                      width: 100,
+                      height: 100,
+                      color: Colors.blue,
+                      child: const Center(
+                        child: Text(
+                          'Container 2',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20), // Adds space between the containers
+                    Container(
+                      width: 100,
+                      height: 100,
+                      color: Colors.blue,
+                      child: const Center(
+                        child: Text(
+                          'Container 2',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20), // Adds space between the containers
+                    Container(
+                      width: 100,
+                      height: 100,
+                      color: Colors.blue,
+                      child: const Center(
+                        child: Text(
+                          'Container 2',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
