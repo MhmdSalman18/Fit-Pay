@@ -101,82 +101,92 @@ class adminHomeState extends State<adminHome> {
                 ),
               ),
               const SizedBox(height: 20), // Adds space between the paragraph and row
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                    Container(
+                Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                  Container(
                     width: MediaQuery.of(context).size.width * 0.4,
                     height: MediaQuery.of(context).size.height * 0.8,
                     decoration: BoxDecoration(
-                      color: Colors.red,
-                      borderRadius: BorderRadius.circular(
-                        16.0), // Adjust the radius as needed
+                    color: Colors.red,
+                    borderRadius: BorderRadius.circular(
+                      16.0), // Adjust the radius as needed
                     ),
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(
-                        16.0), // Apply the same radius to the image
-                      child: Image.asset(
-                        'images/logo.jpg' // Replace with your image URL
-                        ),
+                    borderRadius: BorderRadius.circular(
+                      16.0), // Apply the same radius to the image
+                    child: Image.asset(
+                      'images/logo.jpg' // Replace with your image URL
                     ),
                     ),
-        
+                  ),
                   const SizedBox(width: 20), // Adds space between the containers
-                  Column(
+                  Flexible(
+                    child: Column(
                     children: [
                       const SizedBox(width: 20), // Adds space between the containers
-                      Container(
+                      Flexible(
+                      child: Container(
                         width: 100,
                         height: 100,
                         color: Colors.blue,
                         child: const Center(
-                          child: Text(
-                            'Container 2',
-                            style: TextStyle(color: Colors.white),
-                          ),
+                        child: Text(
+                          'Container 2',
+                          style: TextStyle(color: Colors.white),
+                        ),
                         ),
                       ),
-        
-                      const SizedBox(height: 20), // Adds space between the containers
-                      Container(
-                        width: 100,
-                        height: 100,
-                        color: Colors.blue,
-                        child: const Center(
-                          child: Text(
-                            'Container 2',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                        ),
                       ),
                       const SizedBox(height: 20), // Adds space between the containers
-                      Container(
+                      Flexible(
+                      child: Container(
                         width: 100,
                         height: 100,
                         color: Colors.blue,
                         child: const Center(
-                          child: Text(
-                            'Container 2',
-                            style: TextStyle(color: Colors.white),
-                          ),
+                        child: Text(
+                          'Container 2',
+                          style: TextStyle(color: Colors.white),
+                        ),
                         ),
                       ),
+                      ),
                       const SizedBox(height: 20), // Adds space between the containers
-                      Container(
+                      Flexible(
+                      child: Container(
                         width: 100,
                         height: 100,
                         color: Colors.blue,
                         child: const Center(
-                          child: Text(
-                            'Container 2',
-                            style: TextStyle(color: Colors.white),
-                          ),
+                        child: Text(
+                          'Container 2',
+                          style: TextStyle(color: Colors.white),
                         ),
+                        ),
+                      ),
+                      ),
+                      const SizedBox(height: 20), // Adds space between the containers
+                      Flexible(
+                      child: Container(
+                        width: 100,
+                        height: 100,
+                        color: Colors.blue,
+                        child: const Center(
+                        child: Text(
+                          'Container 2',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        ),
+                      ),
                       ),
                     ],
+                    ),
                   ),
-                ],
-              ),
+                  ],
+                ),
+                ),
             ],
           ),
         ),
