@@ -1,3 +1,4 @@
+import 'package:fit_pay/FRONTEND/ADMIN/this_month_details.dart';
 import 'package:flutter/material.dart';
 
 class adminHome extends StatefulWidget {
@@ -135,6 +136,25 @@ class adminHomeState extends State<adminHome> {
                             child: Text(
                               'Container 2',
                               style: TextStyle(color: Colors.white),
+                            ),
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => ThisMonthDetails()),
+                            );
+                          },
+                          child: Container(
+                            width: 100,
+                            height: 100,
+                            color: Colors.blue,
+                            child: const Center(
+                              child: Text(
+                                'This Month Details',
+                                style: TextStyle(color: Colors.white),
+                              ),
                             ),
                           ),
                         ),
