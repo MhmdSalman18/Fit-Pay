@@ -128,17 +128,7 @@ class adminHomeState extends State<adminHome> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         const SizedBox(width: 20), // Adds space between the containers
-                        Container(
-                          width: 100,
-                          height: 100,
-                          color: Colors.blue,
-                          child: const Center(
-                            child: Text(
-                              'Container 2',
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ),
-                        ),
+                        
                         GestureDetector(
                           onTap: () {
                             Navigator.push(
