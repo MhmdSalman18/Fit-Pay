@@ -11,7 +11,7 @@ class _ThisMonthDetailsState extends State<ThisMonthDetails> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      
+      appBar: AppBar(),
     );
   }
 }
